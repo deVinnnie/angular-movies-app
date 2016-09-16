@@ -1,3 +1,4 @@
+/*@ngInject*/
 class MoviesSearchController {
     constructor($http, $log, MoviesService) {
         this.$http = $http;

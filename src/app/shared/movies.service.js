@@ -64,3 +64,5 @@ export class MoviesService{
         ).then(() => { return; });
     }
 }
+
+MoviesService.$inject = ['$http', '$log', '$location', 'apiURL'];

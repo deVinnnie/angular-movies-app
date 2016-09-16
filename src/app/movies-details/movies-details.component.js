@@ -1,3 +1,4 @@
+/*@ngInject*/
 class MoviesDetailsController{
     constructor(MoviesService, $routeParams){
         this.service = MoviesService;

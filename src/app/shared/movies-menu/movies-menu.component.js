@@ -1,3 +1,4 @@
+/*@ngInject*/
 class MoviesMenuController {
     constructor($location) {
         this.$location = $location;

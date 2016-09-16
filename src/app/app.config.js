@@ -1,10 +1,6 @@
-export function appConfig($log, $routeProvider, $locationProvider){
-    $log.debug("Applying config.");
-
+/*@ngInject*/
+export function appConfig($routeProvider, $locationProvider){
     $locationProvider.html5Mode(true);
-    /*$routeProvider.when("/", {
-
-    });*/
 
     $routeProvider.when("/movies/", {
         template : "<movies-list></movies-list>"

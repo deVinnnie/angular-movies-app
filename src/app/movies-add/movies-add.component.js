@@ -1,3 +1,4 @@
+/*@ngInject*/
 class MoviesAddController {
     constructor($log, $location, MoviesService) {
         this.$log = $log;

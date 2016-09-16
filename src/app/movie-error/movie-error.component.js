@@ -1,7 +1,6 @@
+/*@ngInject*/
 class MovieErrorController {
-    constructor() {
-
-    }
+    constructor() {}
 }
 
 export var MovieNotFoundErrorComponent = {
