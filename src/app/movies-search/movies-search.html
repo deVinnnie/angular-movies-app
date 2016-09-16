@@ -1,20 +1,5 @@
-<form class="pure-form pure-form-aligned"
-      name="searchForm" novalidate ng-submit="$ctrl.search(searchTerm)">
-
-    <fieldset>
-        <div class="pure-control-group">
-            <label for="search-text">Search</label>
-            <input id="search-text" placeholder="Search"
-            type="text" required ng-model="searchTerm"
-            ng-minlength="2"/>
-        </div>
-
-        <div class="pure-controls">
-            <button type="submit" class="button pure-button pure-button-primary"
-            ng-disabled="searchForm.$invalid">Search</button>
-        </div>
-    </fieldset>
-</form>
+<movie-search-box on-search="$ctrl.search(searchTerm)">
+</movie-search-box>
 
 <div>
     <movie-panel ng-repeat="movie in $ctrl.results" movie="movie"></movie-panel>
