@@ -1,0 +1,16 @@
+<div class="movie-panel pure-g">
+    <div class="movie-poster pure-u-2-5">
+        <img ng-src="{{ $ctrl.movie.poster }}"/>
+    </div>
+
+    <div class="movie-short-description pure-u-3-5">
+        <h2>{{ $ctrl.movie.title }}</h2>
+        <span>{{ $ctrl.movie.year }}</span>
+        <p>
+            <a href="" ng-click="$ctrl.clicked($ctrl.movie)">Add to Collection</a> <br/>
+            <a href="/movies/{{ $ctrl.movie.id }}">
+                Details
+            </a>
+        </p>
+    </div>
+</div>

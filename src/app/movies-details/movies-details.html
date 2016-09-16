@@ -1,0 +1,17 @@
+<div class="pure-g">
+    <div class="pure-u-1-5">
+        <img ng-src="{{ $ctrl.movie.poster }}" width="100%"/>
+    </div>
+
+    <div class="movies-long-description pure-u-4-5">
+        <h1>{{ $ctrl.movie.title }}</h1>
+
+        <span>{{ $ctrl.movie.year }}</span>
+        <span>Runtime: {{ $ctrl.movie.runtime }}</span>
+        <span>Rating: {{ $ctrl.movie.rating }}</span>
+
+        <p>{{ $ctrl.movie.plot }}</p>
+
+        <p>{{ $ctrl.movie.seen }}</p>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+main, footer{
+    padding: 5em;
+    padding-top: 1em;
+}
+
+footer{
+    font-style: italic;
+    clear: both;
+}
+
+h1{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+}
+
+i.material-icons{
+    font-size: 24px;
+    vertical-align: middle;
+    margin: 2px;
+    margin-right: 5px;
+}
+
+.movie-panel{
+    width: 50%;
+    float: left;
+}
+
+.movie-panel .movie-short-description{
+    padding: 0 1em;
+    box-sizing: border-box;
+}
+
+.movie-panel .movie-short-description h2{
+    margin-top: 0;
+}
+
+.movie-panel .movie-poster img{
+    width: 100%;
+}
+
+.movies-long-description{
+    padding: 0 1em;
+    box-sizing: border-box;
+}
