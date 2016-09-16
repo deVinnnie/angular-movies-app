@@ -1,7 +1,8 @@
 export class MoviesService{
-    constructor($http, $log, apiURL){
+    constructor($http, $log, $location, apiURL){
         this.$http = $http;
         this.$log = $log;
+        this.$location = $location;
         this.apiURL = apiURL;
     }
 
@@ -27,7 +28,12 @@ export class MoviesService{
         return this.$http.get(`${this.apiURL}${id}`).then(
             (response) => {
                 return response.data;
-        });
+            },
+            (error) => {
+                this.$log.debug("Something Went Wong");
+                this.$location.path('/404');
+            }
+        );
     }
 
     getMovies(){
@@ -51,7 +57,6 @@ export class MoviesService{
         return this.$http.delete(`${this.apiURL}${movie.id}`)
                 .then((response)=> {return response.data});
     }
-
 
     markAsSeen(movie){
         return this.$http.put(`${this.apiURL}${movie.id}`,

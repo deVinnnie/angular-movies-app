@@ -22,4 +22,8 @@ export function appConfig($routeProvider, $locationProvider){
     $routeProvider.when("/movies/:id", {
         template : "<movie-details></movie-details>"
     });
+
+    $routeProvider.otherwise({
+        template : "<movie-not-found-error></movie-not-found-error>"
+    });
 }
