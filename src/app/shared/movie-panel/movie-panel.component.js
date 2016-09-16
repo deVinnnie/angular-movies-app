@@ -6,6 +6,12 @@ class MoviePanelController {
             selectedMovie : movie
         });
     }
+
+    selectRemove(movie){
+        this.onRemove({
+            selectedMovie : movie
+        });
+    }
 }
 
 export var MoviePanelComponent = {
@@ -13,6 +19,8 @@ export var MoviePanelComponent = {
     controller : MoviePanelController,
     bindings: {
         movie: '<',
-        onSelected : "&"
+        inCollection : '<',
+        onSelected : "&",
+        onRemove : "&"
     }
 }

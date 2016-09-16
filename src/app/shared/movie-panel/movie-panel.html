@@ -1,15 +1,35 @@
 <div class="movie-panel pure-g">
     <div class="movie-poster pure-u-2-5">
-        <img ng-src="{{ $ctrl.movie.poster }}"/>
+        <a href="/movies/{{ $ctrl.movie.id }}">
+            <img ng-if="$ctrl.movie.poster !== 'N/A'" ng-src="{{ $ctrl.movie.poster }}"/>
+            <img ng-if="$ctrl.movie.poster === 'N/A'" src="data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+        </a>
     </div>
 
     <div class="movie-short-description pure-u-3-5">
         <h2>{{ $ctrl.movie.title }}</h2>
         <span>{{ $ctrl.movie.year }}</span>
+        <span ng-if="$ctrl.movie.seen">
+            Seen
+        </span>
+
+        <span ng-if="! $ctrl.movie.seen">
+            Not yet seen.
+        </span>
+
         <p>
-            <a href="" ng-click="$ctrl.clicked($ctrl.movie)">Add to Collection</a> <br/>
-            <a href="/movies/{{ $ctrl.movie.id }}">
+            <a class="pure-button pure-button-primary"
+                ng-click="$ctrl.clicked($ctrl.movie)"
+                ng-if="!$ctrl.inCollection">
+                Add to Collection
+            </a> <br/>
+            <a class="pure-button" href="/movies/{{ $ctrl.movie.id }}">
                 Details
+            </a>
+            <a class="pure-button"
+               ng-click="$ctrl.selectRemove($ctrl.movie)"
+               ng-if="$ctrl.inCollection">
+                Remove from Collection
             </a>
         </p>
     </div>

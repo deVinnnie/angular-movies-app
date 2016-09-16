@@ -1,9 +1,10 @@
 class MoviesListController{
-    constructor($log, MoviesService){
+    constructor($log, $location, MoviesService){
         this.$log = $log;
-        this.$log.debug("This is the list controller reporting for duty!");
-
+        this.$location = $location;
         this.service = MoviesService;
+
+        this.$log.debug("This is the list controller reporting for duty!");
     }
 
     $onInit(){
@@ -11,6 +12,13 @@ class MoviesListController{
             this.movies = results;
             this.$log.debug(`There are ${this.movies.length} movies in the collection.`);
         });
+    }
+
+    remove(movie){
+        this.service.remove(movie).then((result) => {
+            this.$location.path("./movies");
+        });
+
     }
 }
 

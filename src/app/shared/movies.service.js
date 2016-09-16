@@ -39,10 +39,23 @@ export class MoviesService{
 
     add(movie){
         this.$log.debug("Adding movie!");
-        this.$http.post(`${this.apiURL}`,
+        return this.$http.post(`${this.apiURL}`,
             {
                 "imdbId" : movie.imdbId
             }
-        );
+        ).then((response) => { return response.data });
+    }
+
+    remove(movie){
+        this.$log.debug("Removing movie!");
+        return this.$http.delete(`${this.apiURL}${movie.id}`)
+                .then((response)=> {return response.data});
+    }
+
+
+    markAsSeen(movie){
+        return this.$http.put(`${this.apiURL}${movie.id}`,
+            { seen : true }
+        ).then(() => { return; });
     }
 }

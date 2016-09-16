@@ -9,8 +9,10 @@ class MoviesAddController {
     Add Movie to Collection
     */
     add(movie){
-        this.service.add(movie);
-        this.$location.path("/movies");
+        this.service.add(movie)
+                    .then((result) => {
+            this.$location.path("/movies");
+        });
     }
 
     search(searchTerm){

@@ -20,8 +20,13 @@ i.material-icons{
     margin-right: 5px;
 }
 
+a{
+    cursor: pointer;
+}
+
 .movie-panel{
     width: 50%;
+    height: 400px;
     float: left;
 }
 
@@ -41,4 +46,8 @@ i.material-icons{
 .movies-long-description{
     padding: 0 1em;
     box-sizing: border-box;
+}
+
+.movie-meta span{
+    display: block;
 }

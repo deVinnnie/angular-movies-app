@@ -6,12 +6,19 @@
     <div class="movies-long-description pure-u-4-5">
         <h1>{{ $ctrl.movie.title }}</h1>
 
-        <span>{{ $ctrl.movie.year }}</span>
-        <span>Runtime: {{ $ctrl.movie.runtime }}</span>
-        <span>Rating: {{ $ctrl.movie.rating }}</span>
+        <div class="movie-meta">
+            <span>Year: {{ $ctrl.movie.year }}</span>
+            <span>Runtime: {{ $ctrl.movie.runtime }} minutes</span>
+            <span>Rating: {{ $ctrl.movie.rating }}</span>
+        </div>
 
-        <p>{{ $ctrl.movie.plot }}</p>
+        <p>{{ $ctrl.movie.plot ? 'Seen' : 'Not Seen'}}</p>
 
-        <p>{{ $ctrl.movie.seen }}</p>
+        <a class="pure-button pure-button-primary"
+           ng-click="$ctrl.markAsSeen()"
+           ng-if="!$ctrl.movie.seen">
+           Mark as seen
+        </a>
+
     </div>
 </div>

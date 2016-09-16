@@ -1,3 +1,7 @@
 <div>
-    <movie-panel ng-repeat="movie in $ctrl.movies" movie="movie"></movie-panel>
+    <movie-panel ng-repeat="movie in $ctrl.movies"
+                 movie="movie"
+                 on-remove="$ctrl.remove(selectedMovie)"
+                 in-collection="true">
+    </movie-panel>
 </div>

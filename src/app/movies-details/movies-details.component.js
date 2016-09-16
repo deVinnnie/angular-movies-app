@@ -11,6 +11,13 @@ class MoviesDetailsController{
             this.movie = result;
         });
     }
+
+    markAsSeen(){
+        this.service.markAsSeen(this.movie).then(
+            () => {
+            this.$onInit();
+        });
+    }
 }
 
 export var MoviesDetailsComponent = {
