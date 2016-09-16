@@ -1,0 +1,25 @@
+<div class="pure-menu pure-menu-horizontal custom-restricted-width" style="display: inline-block;">
+    <span class="pure-menu-heading">Angular Movies App</span>
+    <ul class="pure-menu-list">
+       <li class="pure-menu-item" ng-class="{'pure-menu-selected' : $ctrl.isActive('/movies/')}">
+           <a href="/movies" class="pure-menu-link" >
+               <i class="material-icons">list</i>
+               My Movies
+           </a>
+       </li>
+
+       <li class="pure-menu-item" ng-class="{'pure-menu-selected' : $ctrl.isActive('/movies/search')}">
+           <a href="/movies/search" class="pure-menu-link">
+            <i class="material-icons">search</i>
+            Search
+            </a>
+       </li>
+
+       <li class="pure-menu-item" ng-class="{'pure-menu-selected' : $ctrl.isActive('/movies/add')}">
+           <a href="/movies/add" class="pure-menu-link">
+            <i class="material-icons">add_circle</i>
+            Add
+            </a>
+       </li>
+    </ul>
+</div>

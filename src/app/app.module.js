@@ -10,6 +10,7 @@ import { MoviesListComponent } from './movies-list/movies-list.component';
 import { MoviesAddComponent } from './movies-add/movies-add.component';
 import { MovieNotFoundErrorComponent } from './movie-error/movie-error.component';
 import { MovieSearchBoxComponent } from './shared/movie-search-box/movie-search-box.component.js';
+import { MoviesMenuComponent } from './shared/movies-menu/movies-menu.component.js';
 
 var appModule = angular.module('moviesApp', ['ngRoute'])
        .config(appConfig)
@@ -21,6 +22,7 @@ var appModule = angular.module('moviesApp', ['ngRoute'])
        .component("movieDetails", MoviesDetailsComponent)
        .component("moviesList", MoviesListComponent)
        .component("movieNotFoundError", MovieNotFoundErrorComponent)
+       .component("moviesMenu", MoviesMenuComponent)
        .component("movieSearchBox", MovieSearchBoxComponent);
 
 export default appModule.name;

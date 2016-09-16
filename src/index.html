@@ -11,32 +11,11 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400" rel="stylesheet">
     </head>
     <body>
-        <div class="pure-menu pure-menu-horizontal custom-restricted-width" style="display: inline-block;">
-            <span class="pure-menu-heading">Angular Movies App</span>
-            <ul class="pure-menu-list">
-               <li class="pure-menu-item">
-                   <a href="/#/movies" class="pure-menu-link">
-                       <i class="material-icons">list</i>
-                       My Movies
-                   </a>
-               </li>
-               <li class="pure-menu-item">
-                   <a href="/#/movies/search" class="pure-menu-link">
-                    <i class="material-icons">search</i>
-                    Search
-                    </a>
-               </li>
-
-               <li class="pure-menu-item">
-                   <a href="/#/movies/add" class="pure-menu-link">
-                    <i class="material-icons">add_circle</i>
-                    Add
-                    </a>
-               </li>
-            </ul>
-        </div>
-
-        <main ng-view></main>
+        <movies-menu>
+        </movies-menu>
+        
+        <main ng-view>
+        </main>
 
         <footer>
             <p>1 + 1 is still {{ 1 + 1 }}</p>

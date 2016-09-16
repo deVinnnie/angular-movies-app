@@ -2,5 +2,6 @@
 </movie-search-box>
 
 <div>
-    <movie-panel ng-repeat="movie in $ctrl.results" movie="movie"></movie-panel>
+    <movie-panel ng-repeat="movie in $ctrl.results" in-collection="true" movie="movie">
+    </movie-panel>
 </div>

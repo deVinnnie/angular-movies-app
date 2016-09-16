@@ -24,7 +24,8 @@
                 ng-if="!$ctrl.inCollection">
                 Add to Collection
             </a> <br/>
-            <a class="pure-button" href="/movies/{{ $ctrl.movie.id }}">
+            <a class="pure-button" href="/movies/{{ $ctrl.movie.id }}"
+                ng-if="$ctrl.inCollection">
                 Details
             </a>
             <a class="pure-button"
