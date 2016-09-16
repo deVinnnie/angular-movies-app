@@ -1,5 +1,5 @@
-export function appConfig($routeProvider, $locationProvider){
-    console.log("Applying config.");
+export function appConfig($log, $routeProvider, $locationProvider){
+    $log.debug("Applying config.");
 
     $locationProvider.html5Mode(true);
     /*$routeProvider.when("/", {

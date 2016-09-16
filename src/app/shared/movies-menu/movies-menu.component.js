@@ -13,4 +13,4 @@ class MoviesMenuController {
 export var MoviesMenuComponent = {
     template : require("./movies-menu.html"),
     controller : MoviesMenuController
-}
+};
